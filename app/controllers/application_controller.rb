@@ -14,10 +14,10 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    redirect_to products_path unless current_user
+    redirect_to root_path unless current_user
   end
 
   def require_no_user
-    redirect_to root_path if current_user
+    redirect_to products_path if current_user
   end
 end
