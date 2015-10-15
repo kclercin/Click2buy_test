@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users, only: [:new, :create]
+  
   resource :users, only: [:edit] do
     get "cart" => "users#cart"
   end

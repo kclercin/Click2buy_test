@@ -1,5 +1,4 @@
 - bundle exec rake db:create
 - bundle exec rake db:migrate
-- bundle exec rails console => User.new(email: "demo@demo.com", password: "demo", password_confirmation: "demo")
 
 - Importer les produits

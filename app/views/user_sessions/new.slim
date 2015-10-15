@@ -2,5 +2,8 @@
   = simple_form_for @user_session, class: "horizontal-form" do |f|
     = f.input :email
     = f.input :password
+
+    .pull-left
+      = link_to "Sign up", new_user_path
     .pull-right
       = f.submit "Sign in", class: "btn btn-default"
