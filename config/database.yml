@@ -1,0 +1,5 @@
+default: &default
+  adapter: mysql2
+development:
+  <<: *default
+  database: click2buy_integration

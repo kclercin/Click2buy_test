@@ -1,0 +1,18 @@
+h1.page-header
+  = t(:my_cart)
+table.table.table-hover
+  thead
+    th
+      | Id
+    th
+      = t :name
+    th
+      = t :description
+  - current_user.products.each do |product|
+    tr
+      td
+        = product.product_id
+      td
+        = product.name
+      td
+        = product.description

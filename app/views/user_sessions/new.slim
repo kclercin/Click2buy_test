@@ -1,0 +1,6 @@
+.col-xs-12.col-md-3.col-md-offset-4
+  = simple_form_for @user_session, class: "horizontal-form" do |f|
+    = f.input :email
+    = f.input :password
+    .pull-right
+      = f.submit "Sign in", class: "btn btn-default"

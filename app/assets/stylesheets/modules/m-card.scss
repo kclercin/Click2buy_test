@@ -1,0 +1,53 @@
+// Module Card
+$m-card-background: #FFF;
+$m-card-title-font-size: 13px;
+$m-card-title-font-weight: normal;
+$m-card-body-padding: 10px;
+$m-card-title-color: darken(#FFF, 10%);
+$m-card-title-text-align: center;
+$m-card-section-p-font-size: 12px;
+
+.card{
+  background-color: $m-card-background;
+  margin: auto;
+  margin-top: 15px;
+  text-align: center;
+
+  .card-title{
+    display: table-cell;
+    height: 61px;
+    width: 1000px;
+    padding: 10px 10px;
+    text-align: $m-card-title-text-align;
+    vertical-align: middle;
+  }
+
+  .card-body{
+    padding: $m-card-body-padding;
+  }
+
+  h1, h2, h3, h4{
+    font-size: $m-card-title-font-size;
+    font-weight: $m-card-title-font-weight;
+    margin: 0px;
+  }
+
+  .card-body{
+    .section{
+      padding: 5px;
+      border-bottom: 1px solid $m-card-title-color;
+      > p{
+        font-size: $m-card-section-p-font-size;
+      }
+    }
+    .section:last-child{
+      border-bottom: 0px;
+    }
+  }
+
+
+  .card-footer{
+    padding: 0px $m-card-body-padding;
+    padding-bottom: $m-card-body-padding;
+  }
+}
