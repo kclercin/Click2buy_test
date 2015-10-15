@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   def refresh_products
     @api = Click2buyApi.new("FmMvBtunzjXkeNVU5CxcP56M")
     @categories = JSON.parse(@api.get_products("ST2-77d93ca","50055"))
+    @product_count = 0
     @categories.each do |category|
       category.each do |product|
         @product = Product.new
@@ -18,14 +19,16 @@ class ProductsController < ApplicationController
         @product.name = product["name"]
         @product.thumbnail = product["img"]["medium"]
         @product.price = product["price"]
-        @product.save
+        @product_count += 1 if @product.save
       end
     end
+    flash[:success] = t(:product_import, count: @product_count)
     redirect_to products_path
   end
 
   def add_to_cart
     current_user.products << @product
+    flash[:success] = t(:product_add_to_cart)
     respond_to do |format|
       format.js{
         render layout: false

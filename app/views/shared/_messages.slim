@@ -1,0 +1,9 @@
+- if flash.any?
+  aside.alerts style="display: none;"
+    - flash.each do |name, msg|
+      .alert-box class="#{name}" data-alert=""
+        - if msg.is_a?(String)
+          = msg.html_safe
+          - flash.delete(name)
+javascript:
+  fadeOutFlash();

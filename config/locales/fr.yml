@@ -3,4 +3,9 @@ fr:
   site_title: "Click2buy Intégration"
   my_cart: "Mon panier"
   import_products: "Importer les produits"
+  product_add_to_cart: "Le produit a bien été ajouté au panier"
   sign_out: "Deconnexion"
+  product_import:
+    one: "Un produit a été importé."
+    other: "%{count} produits ont été importés."
+    zero: "Aucun produit n'a été importé."
