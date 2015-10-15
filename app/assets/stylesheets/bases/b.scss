@@ -1,0 +1,12 @@
+#ajax-flash{
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  .alert-box{
+    padding: 15px;
+    &.success{
+      background-color: #3c763d;
+      color: #FFF;
+    }
+  }
+}
